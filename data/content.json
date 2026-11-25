@@ -1,0 +1,24 @@
+{
+  "title": "F + I",
+  "subtitle": "Cada segundo ao seu lado é um presente.",
+  "counterLabel": "Juntos há",
+  "start": "2026-07-12T17:00:00-03:00",
+  "galleryTitle": "Nossos momentos",
+  "photos": [],
+  "versesTitle": "Palavras que guardo no coração",
+  "verses": [
+    {
+      "text": "Agora, pois, permanecem a fé, a esperança e o amor, estes três; porém o maior destes é o amor.",
+      "ref": "1 Coríntios 13:13"
+    },
+    {
+      "text": "O cordão de três dobras não se rompe com facilidade.",
+      "ref": "Eclesiastes 4:12"
+    }
+  ],
+  "mapTitle": "Nosso lugar",
+  "mapText": "Onde tudo ganhou cor.",
+  "mapQuery": "Brasil",
+  "mapZoom": 4,
+  "footer": "Feito com carinho, só pra você."
+}

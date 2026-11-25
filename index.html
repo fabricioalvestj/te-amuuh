@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F + I</title>
+<meta name="theme-color" content="#FFC61A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,600&family=Nunito:wght@400;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="sf sf-bg"></div><div class="sf sf-l"></div><div class="sf sf-r"></div>
+  <div class="hero-in">
+    <h1 id="title">F + I</h1>
+    <p class="subtitle" id="subtitle"></p>
+    <p class="counter-label" id="counterLabel"></p>
+    <div class="units" id="units" role="timer" aria-live="off"></div>
+    <p class="total" id="total"></p>
+  </div>
+</header>
+
+<section class="block" id="galeria">
+  <div class="wrap">
+    <h2 id="galleryTitle"></h2><div class="sf divider"></div>
+    <div class="gallery" id="gallery"></div>
+    <p class="empty" id="galleryEmpty" hidden>As fotos de vocês chegam aqui em breve.</p>
+  </div>
+</section>
+
+<section class="block verses" id="versiculos">
+  <div class="wrap">
+    <h2 id="versesTitle"></h2><div class="sf divider"></div>
+    <div class="verse-list" id="verses"></div>
+  </div>
+</section>
+
+<section class="block" id="mapa">
+  <div class="wrap">
+    <h2 id="mapTitle"></h2><div class="sf divider"></div>
+    <p class="lede" id="mapText"></p>
+    <div class="map-frame"><iframe id="mapFrame" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <a class="map-link" id="mapLink" target="_blank" rel="noopener">Abrir no Google Maps</a>
+  </div>
+</section>
+
+<footer><div class="sf"></div><span id="footer"></span></footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" alt=""><p id="lbCap"></p>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima">›</button>
+</div>
+
+<script src="assets/common.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

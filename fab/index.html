@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>fab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="fab.css">
+</head>
+<body class="fab">
+
+<!-- Entrada -->
+<main id="login" class="login">
+  <div class="sf login-sf"></div>
+  <h1 class="fab-h1">fab</h1>
+  <p class="muted">Conecte este painel ao seu repositório do GitHub para editar o site.</p>
+  <div class="card">
+    <label>Token do GitHub
+      <input id="lgToken" type="password" autocomplete="off" placeholder="github_pat_…">
+    </label>
+    <div class="row2">
+      <label>Usuário<input id="lgOwner" placeholder="seu-usuario"></label>
+      <label>Repositório<input id="lgRepo" placeholder="nome-do-repo"></label>
+    </div>
+    <button class="btn" id="lgBtn">Entrar</button>
+    <p class="err" id="lgErr" hidden></p>
+    <p class="muted small">O token fica salvo só neste navegador. Veja no README como criar um token com acesso apenas a este repositório.</p>
+  </div>
+</main>
+
+<!-- Painel -->
+<div id="app" hidden>
+  <header class="bar">
+    <strong>🌻 fab</strong>
+    <span id="status" class="status" role="status"></span>
+    <a class="btn ghost" href="../" target="_blank">Ver site</a>
+    <button class="btn" id="saveBtn">Salvar alterações</button>
+    <button class="btn ghost" id="logoutBtn">Sair</button>
+  </header>
+
+  <main class="panel">
+    <section class="card">
+      <h2>Título e contador</h2>
+      <label>Título<input data-k="title"></label>
+      <label>Frase abaixo do título<input data-k="subtitle"></label>
+      <div class="row2">
+        <label>Texto acima do contador<input data-k="counterLabel"></label>
+        <label>Início da contagem<input type="datetime-local" id="start"></label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Fotos</h2>
+      <label>Título da seção<input data-k="galleryTitle"></label>
+      <label class="drop">
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <span>Escolher fotos para enviar</span>
+        <small>Qualquer proporção. A foto não é cortada nem esticada.</small>
+      </label>
+      <div class="photos" id="photoGrid"></div>
+      <p class="muted" id="photoEmpty">Nenhuma foto ainda.</p>
+    </section>
+
+    <section class="card">
+      <h2>Versículos</h2>
+      <label>Título da seção<input data-k="versesTitle"></label>
+      <div id="verseList"></div>
+      <button class="btn ghost" id="addVerse">Adicionar versículo</button>
+    </section>
+
+    <section class="card">
+      <h2>Mapa</h2>
+      <label>Título da seção<input data-k="mapTitle"></label>
+      <label>Frase<input data-k="mapText"></label>
+      <div class="row2">
+        <label>Lugar (nome, endereço ou coordenadas)<input data-k="mapQuery" placeholder="Praça da Matriz, Caxias MA"></label>
+        <label>Zoom (1 a 20)<input data-k="mapZoom" type="number" min="1" max="20"></label>
+      </div>
+      <div class="map-prev"><iframe id="mapPrev" title="Prévia do mapa"></iframe></div>
+    </section>
+
+    <section class="card">
+      <h2>Rodapé</h2>
+      <label>Mensagem final<input data-k="footer"></label>
+    </section>
+  </main>
+</div>
+
+<script src="../assets/common.js"></script>
+<script src="fab.js"></script>
+</body>
+</html>
